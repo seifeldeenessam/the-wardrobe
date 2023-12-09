@@ -1,0 +1,21 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--double-spacing);
+}
+
+.header > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--double-spacing);
+}
+
+.header > div a h1 {
+	font-size: var(--main-heading-size);
+	font-weight: var(--main-heading-weight);
+	color: var(--accent-primary);
+}

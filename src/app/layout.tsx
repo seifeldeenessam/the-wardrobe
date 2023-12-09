@@ -1,3 +1,4 @@
+import Header from '@/components/header';
 import Texts from '@assets/jsons/texts.json';
 import '@styles/app.css';
 import type { Metadata } from 'next';
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en" dir="LTR">
 			<body className={DMSans.className}>
+				<Header />
 				<main>{children}</main>
 			</body>
 		</html>
