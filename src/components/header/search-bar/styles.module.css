@@ -4,9 +4,9 @@
 	justify-content: flex-start;
 	align-items: center;
 	gap: var(--half-spacing);
-	padding: var(--spacing);
 	border-radius: var(--border-radius);
 	background-color: var(--background-secondary);
+	overflow: hidden;
 }
 
 .search-bar > input {
@@ -15,6 +15,7 @@
 	color: var(--text-primary);
 	font-size: var(--sub-label-size);
 	font-weight: var(--sub-label-weight);
+	padding-left: var(--spacing);
 }
 
 .search-bar > input::placeholder {
