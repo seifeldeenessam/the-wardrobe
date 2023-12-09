@@ -1,29 +1,23 @@
 .header {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: var(--spacing) var(--double-spacing);
-}
-
-.header > div {
-	display: flex;
-	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 	gap: var(--double-spacing);
+	padding: var(--spacing) var(--double-spacing);
 }
 
-.header > div a h1 {
+.header > a h1 {
 	font-size: var(--main-heading-size);
 	font-weight: var(--main-heading-weight);
 	color: var(--accent-primary);
 }
 
-.header > ul {
+.header > nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-	gap: var(--double-spacing);
+	gap: var(--spacing);
+	margin-left: auto;
 }
