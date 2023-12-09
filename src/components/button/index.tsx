@@ -1,26 +1,47 @@
+import Link from 'next/link';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import styles from './styles.module.css';
-type Contents = {
-	label?: string;
-	startIcon?: ReactNode;
-	endIcon?: ReactNode;
-};
 
 type Variant = 'default' | 'primary' | 'secondary' | 'tertiary';
 
-type Props = ButtonHTMLAttributes<'button'> & {
-	contents: Contents;
-	variant: Variant;
+type ButtonProps = {
+	element: 'button';
+	type: ButtonHTMLAttributes<'button'>['type'];
 };
 
-const Button = ({ type, contents, variant }: Props) => {
-	return (
-		<button type={type} className={[styles['button'], styles[`button-${variant}`]].join(' ')}>
-			{contents.startIcon && contents.startIcon}
-			{contents.label && contents.label}
-			{contents.endIcon && contents.endIcon}
-		</button>
-	);
+type AnchorProps = {
+	element: 'anchor';
+	href: string;
+};
+
+type Props = { variant: Variant; content: { label?: string; startIcon?: ReactNode; endIcon?: ReactNode } } & (ButtonProps | AnchorProps);
+
+const Button = (props: Props) => {
+	const Content = () => {
+		return (
+			<>
+				{props.content.startIcon && props.content.startIcon}
+				{props.content.label && props.content.label}
+				{props.content.endIcon && props.content.endIcon}
+			</>
+		);
+	};
+
+	if (props.element === 'button') {
+		return (
+			<button type={props.type} className={[styles['button'], styles[`button-${props.variant}`], props.content.label ? undefined : styles['button-rounded']].join(' ')}>
+				<Content />
+			</button>
+		);
+	} else if (props.element === 'anchor') {
+		return (
+			<Link href={props.href} className={[styles['button'], styles[`button-${props.variant}`], props.content.label ? undefined : styles['button-rounded']].join(' ')}>
+				<Content />
+			</Link>
+		);
+	} else {
+		return null;
+	}
 };
 
 export default Button;
