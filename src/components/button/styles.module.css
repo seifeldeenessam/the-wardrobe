@@ -50,7 +50,7 @@
 }
 
 .button-tertiary {
-	background-color: var(--background-primary);
+	background-color: transparent;
 }
 
 .button-tertiary:hover {
