@@ -19,3 +19,11 @@
 	font-weight: var(--main-heading-weight);
 	color: var(--accent-primary);
 }
+
+.header > ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--double-spacing);
+}
