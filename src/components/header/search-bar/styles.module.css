@@ -1,0 +1,22 @@
+.search-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--half-spacing);
+	padding: var(--spacing);
+	border-radius: var(--border-radius);
+	background-color: var(--background-secondary);
+}
+
+.search-bar > input {
+	all: unset;
+	min-width: 25ch;
+	color: var(--text-primary);
+	font-size: var(--sub-label-size);
+	font-weight: var(--sub-label-weight);
+}
+
+.search-bar > input::placeholder {
+	color: var(--text-secondary);
+}
