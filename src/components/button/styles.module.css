@@ -1,0 +1,18 @@
+.button {
+	all: unset;
+	padding: var(--spacing);
+	cursor: pointer;
+}
+
+.button-default {
+}
+
+.button-primary {
+}
+
+.button-secondary {
+}
+
+.button-tertiary {
+	padding: 0;
+}
