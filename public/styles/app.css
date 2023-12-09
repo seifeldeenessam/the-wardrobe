@@ -8,7 +8,7 @@
 	outline: none;
 	list-style: none;
 	text-decoration: none;
-	transition: 300ms;
+	transition: 250ms;
 	font: var(--main-text);
 	color: var(--text-primary);
 	-webkit-tap-highlight-color: transparent;
