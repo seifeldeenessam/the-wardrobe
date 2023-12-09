@@ -3,7 +3,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--double-spacing);
+	padding: var(--spacing) var(--double-spacing);
 }
 
 .header > div {
@@ -18,4 +18,12 @@
 	font-size: var(--main-heading-size);
 	font-weight: var(--main-heading-weight);
 	color: var(--accent-primary);
+}
+
+.header > ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--double-spacing);
 }
