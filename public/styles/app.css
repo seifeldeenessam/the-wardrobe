@@ -1,0 +1,25 @@
+@import url('./constants.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	transition: 300ms;
+	font: var(--main-text);
+	color: var(--text-primary);
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: stretch;
+	background-color: var(--background-primary);
+}
