@@ -1,16 +1,15 @@
 import Header from '@/components/header';
 import { getText } from '@/utilities/texts';
 import '@styles/app.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { DM_Sans } from 'next/font/google';
 
 const DMSans = DM_Sans({ subsets: ['latin'], preload: true });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://www.wardrobe.com/'),
 	title: getText('app_title'),
 	description: getText('app_description'),
-	themeColor: '#e0f33a',
-	viewport: { width: 'device-width', initialScale: 1 },
 	keywords: ['Wardrobe', 'clothing', 'fashion', 'style'],
 	robots: { index: true, follow: true },
 	icons: { icon: '/meta/favicon.ico', apple: '/meta/apple-touch-icon.png' },
@@ -22,6 +21,12 @@ export const metadata: Metadata = {
 		url: 'https://www.wardrobe.com/',
 		type: 'website'
 	}
+};
+
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	themeColor: '#e0f33a'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
