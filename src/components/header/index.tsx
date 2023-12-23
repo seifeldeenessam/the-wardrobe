@@ -1,7 +1,7 @@
-import Texts from '@assets/jsons/texts.json';
 import { Bag, Bell, Heart, User } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 import Button from '../button';
+import Text from '../text';
 import SearchBar from './search-bar';
 import styles from './styles.module.css';
 
@@ -11,7 +11,7 @@ const Header = (props: Props) => {
 	return (
 		<header className={styles['header']}>
 			<Link href={'/'}>
-				<h1>{Texts['app-name']}</h1>
+				<Text variant="h1" content={'app_name'} />
 			</Link>
 			<SearchBar />
 			<nav>
