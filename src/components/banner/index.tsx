@@ -1,17 +1,15 @@
-import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './styles.module.css';
 
 const Banner = () => {
-    return (
-        <Image
-            src='/assets/images/banner-image.jpg'
-            className={styles["banner"]}
-            width={100}
-            height={50}
-            alt='banner'
-        />
-    )
-}
+	return (
+		<section className={styles['banner']}>
+			<Link href={'/'}>
+				<Image src="/assets/images/banner-image.jpg" alt="Hero Banner" fill priority />
+			</Link>
+		</section>
+	);
+};
 
-export default Banner
+export default Banner;

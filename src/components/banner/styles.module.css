@@ -1,6 +1,18 @@
 .banner {
-    margin: 2rem;
-    width: 100%;
-    height: 450px;
-    border-radius: 2rem;
+	width: 100%;
+	height: 500px;
+	display: flex;
+	padding: var(--double-spacing);
+}
+
+.banner > a {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: var(--double-spacing);
+	overflow: hidden;
+}
+
+.banner > a img {
+	object-fit: cover;
 }
